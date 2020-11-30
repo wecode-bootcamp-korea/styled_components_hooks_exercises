@@ -1,3 +1,5 @@
+import { css } from "styled-components";
+
 const theme = {
   colors: {
     mainBlue: "#0057FF",
@@ -14,7 +16,12 @@ const theme = {
     loginLightGray: "#BCBCBC",
     loginBlue: "#1473E6",
   },
-  fonts: ["Noto Sans KR", "sans-serif", "Roboto"],
+  flexSet: (row = null, column = null, direction = null) => css`
+    display: flex;
+    justify-content: ${row};
+    align-items: ${column};
+    flex-direction: ${direction};
+  `,
 };
 
 export default theme;
